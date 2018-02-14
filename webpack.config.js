@@ -1,8 +1,11 @@
+const webpack = require('webpack');
+
 module.exports = {
-	entry: './index.jsx',
+	entry: './server.jsx',
 	output: {
 		filename: './bundler.js'
 	},
+	target: 'node',
 	module: {
 		rules: [
 			{
@@ -17,5 +20,8 @@ module.exports = {
 				}
 			}
 		]
-	}
+	},
+	plugins: [
+		new webpack.optimize.UglifyJsPlugin()
+	]
 };
