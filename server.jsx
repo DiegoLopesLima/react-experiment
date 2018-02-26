@@ -28,11 +28,11 @@ application.get('/', (request, response) => {
 
 		handlerClick = event => console.log(event.type),
 
-		body = <div onClick={handlerClick}>Hello world!</div>,
+		content = <div onClick={handlerClick}>Hello world!</div>,
 
 		html = template({
 			title: 'Title',
-			body: body
+			content: content
 		});
 
 	response.send('<!DOCTYPE html>' + ReactDOMServer.renderToString(html));

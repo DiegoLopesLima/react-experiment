@@ -12,7 +12,9 @@ export default ({ language = 'pt-BR', charset = 'UTF-8', title, body }) => {
 				<title>{title}</title>
 			</head>
 
-			<body>{body}</body>
+			<body>
+				<div id="root">{content}</div>
+			</body>
 		</html>
 	);
 
