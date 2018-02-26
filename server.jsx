@@ -24,14 +24,14 @@ application.use(compression());
 
 application.get('/', (request, response) => {
 
-	let
+	const
 
 		handlerClick = event => console.log(event.type),
 
 		body = <div onClick={handlerClick}>Hello world!</div>,
 
 		html = template({
-			title: 'Hello World',
+			title: 'Title',
 			body: body
 		});
 
