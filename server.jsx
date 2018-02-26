@@ -1,8 +1,10 @@
-import express from 'express';
-
 import React from 'react';
 
 import ReactDOMServer from 'react-dom/server';
+
+import express from 'express';
+
+import compression from 'compression';
 
 import template from './templates/blank/blank.template.jsx';
 
@@ -18,16 +20,22 @@ const
 
 application.use(express.static('./public'));
 
-let element = <div>Hello world!</div>;
+application.use(compression());
 
 application.get('/', (request, response) => {
 
-	response.send(
-		template({
+	let
+
+		handlerClick = event => console.log(event.type),
+
+		body = <div onClick={handlerClick}>Hello world!</div>,
+
+		html = template({
 			title: 'Hello World',
-			body: ReactDOMServer.renderToString(element)
-		})
-	);
+			body: body
+		});
+
+	response.send('<!DOCTYPE html>' + ReactDOMServer.renderToString(html));
 
 });
 
