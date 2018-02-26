@@ -4,7 +4,7 @@ import React from 'react';
 
 import ReactDOMServer from 'react-dom/server';
 
-let element = <div>Hello world!</div>;
+import template from './templates/blank/blank.template.jsx';
 
 const
 
@@ -12,6 +12,23 @@ const
 
 	port = 3000;
 
-application.get('/', (request, response) => response.send(ReactDOMServer.renderToString(element)));
+// const middleware = (request, response, next) = next();
+
+// application.use(middleware);
+
+application.use(express.static('./public'));
+
+let element = <div>Hello world!</div>;
+
+application.get('/', (request, response) => {
+
+	response.send(
+		template({
+			title: 'Hello World',
+			body: ReactDOMServer.renderToString(element)
+		})
+	);
+
+});
 
 application.listen(port, () => console.log(`Listening on port ${port}.`));
