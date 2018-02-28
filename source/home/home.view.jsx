@@ -12,7 +12,8 @@ export default class HomeView extends React.Component {
 					label: 'Lorem',
 					id: (new Date).getTime()
 				}
-			]
+			],
+			counter: 1
 		};
 
 		this.handleClickPush = this.handleClickPush.bind(this);
@@ -28,6 +29,8 @@ export default class HomeView extends React.Component {
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolorem necessitatibus ab et quos reiciendis iste, impedit eligendi expedita enim incidunt saepe quam cumque tenetur beatae quibusdam magni quo obcaecati?</p>
 
 				<button type="button" onClick={this.handleClickPush}>Lorem ipsum</button>
+
+				<p>{this.state.counter} items</p>
 
 				<ul>
 					{this.state.items.map(item => (
@@ -49,7 +52,8 @@ export default class HomeView extends React.Component {
 					label: 'Lorem',
 					id: (new Date).getTime()
 				}
-			)
+			),
+			counter: prevState.counter + 1
 		}));
 
 	}

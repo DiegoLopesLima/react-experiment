@@ -2,6 +2,6 @@ import React from 'react';
 
 import ReactDOM from 'react-dom';
 
-import HomeView from '../server/home.jsx';
+import HomeView from './home.view.jsx';
 
 ReactDOM.render(<HomeView />, document.getElementById('root'));

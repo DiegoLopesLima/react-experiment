@@ -6,7 +6,7 @@ const
 
 module.exports = [
 	{
-		entry: path.join(__dirname, 'source/server/server.jsx'),
+		entry: path.join(__dirname, 'source/server.jsx'),
 		output: {
 			path: path.join(__dirname, 'distribution'),
 			filename: 'server.bundler.js'
@@ -32,7 +32,7 @@ module.exports = [
 		]
 	},
 	{
-		entry: path.join(__dirname, 'source/client/client.jsx'),
+		entry: path.join(__dirname, 'source/home/home.client.jsx'),
 		output: {
 			path: path.join(__dirname, 'distribution/public/assets'),
 			filename: 'client.bundler.js'
