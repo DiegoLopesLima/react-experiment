@@ -1,5 +1,6 @@
-# Ignore modules folder.
+# Folders
 node_modules
+distribution
 
-# Ignore log files.
+# Files
 *.log
