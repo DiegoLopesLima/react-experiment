@@ -20,7 +20,8 @@ router.route('/')
 					{
 						src: '/assets/client.bundler.js'
 					}
-				]
+				],
+				title: 'Home'
 			};
 
 		response.sendTemplate(<BlankTemplate {...templateProperties} />);

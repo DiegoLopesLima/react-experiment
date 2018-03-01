@@ -1,8 +1,4 @@
-const
-
-	webpack = require('webpack'),
-
-	path = require('path');
+const path = require('path');
 
 module.exports = [
 	{
@@ -26,10 +22,7 @@ module.exports = [
 					}
 				}
 			]
-		},
-		plugins: [
-			new webpack.optimize.UglifyJsPlugin()
-		]
+		}
 	},
 	{
 		entry: path.join(__dirname, 'source/home/home.client.jsx'),
@@ -51,9 +44,6 @@ module.exports = [
 					}
 				}
 			]
-		},
-		plugins: [
-			new webpack.optimize.UglifyJsPlugin()
-		]
+		}
 	}
 ];
