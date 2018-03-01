@@ -2,12 +2,13 @@ const path = require('path');
 
 module.exports = [
 	{
+		mode: 'development',
+		target: 'node',
 		entry: path.join(__dirname, 'source/server.jsx'),
 		output: {
 			path: path.join(__dirname, 'distribution'),
 			filename: 'server.bundler.js'
 		},
-		target: 'node',
 		module: {
 			rules: [
 				{
@@ -25,6 +26,8 @@ module.exports = [
 		}
 	},
 	{
+		mode: 'development',
+		target: 'web',
 		entry: path.join(__dirname, 'source/home/home.client.jsx'),
 		output: {
 			path: path.join(__dirname, 'distribution/public/assets'),
