@@ -1,4 +1,8 @@
-const path = require('path');
+const
+
+	webpackNodeExternals = require('webpack-node-externals'),
+
+	path = require('path');
 
 module.exports = [
 	{
@@ -9,6 +13,7 @@ module.exports = [
 			path: path.join(__dirname, 'distribution'),
 			filename: 'server.bundler.js'
 		},
+		externals: [webpackNodeExternals()],
 		module: {
 			rules: [
 				{
