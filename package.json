@@ -4,9 +4,8 @@
   "description": "React experiment.",
   "main": "./distribution/server.bundler.js",
   "scripts": {
-    "start": "node ./distribution/server.bundler.js",
     "build": "webpack --config ./webpack.config.js --colors",
-	"watch": "webpack --config ./webpack.config.js --colors --watch"
+    "start": "node ./distribution/server.bundler.js"
   },
   "keywords": [
     "react",
