@@ -28,7 +28,7 @@ export default class HomeView extends React.Component {
 
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolorem necessitatibus ab et quos reiciendis iste, impedit eligendi expedita enim incidunt saepe quam cumque tenetur beatae quibusdam magni quo obcaecati?</p>
 
-				<button type="button" onClick={this.handleClickPush}>Lorem ipsum</button>
+				<button type="button" onClick={this.handleClickPush}>Trigger</button>
 
 				<p>{this.state.counter} items</p>
 

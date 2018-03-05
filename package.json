@@ -1,10 +1,12 @@
 {
-  "name": "draft",
+  "name": "react-experiment",
   "version": "1.0.0-alpha",
   "description": "React experiment.",
   "main": "./distribution/server.bundler.js",
   "scripts": {
-    "start": "webpack --config webpack.config.js && node ./distribution/server.bundler.js"
+    "start": "node ./distribution/server.bundler.js",
+    "build": "webpack --config ./webpack.config.js --colors",
+	"watch": "webpack --config ./webpack.config.js --colors --watch"
   },
   "keywords": [
     "react",

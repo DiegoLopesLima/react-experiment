@@ -1,15 +1,15 @@
-# React Origin
+# React experiment
 
-A simple and minimalist pattern to bootstrap a React application.
+An universal React application experiment.
 
 ## Running
 
 ```
-npm start
+npm run build && npm run start
 ```
 
 ## License
 
-Code and documentation copyright © 2018 React Origin.
+Code and documentation copyright © 2018 React experiment.
 
 All content of this repository is licensed under the [MIT License](https://github.com/DiegoLopesLima/ract-origin/blob/master/LICENSE.md).
